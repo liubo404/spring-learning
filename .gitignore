@@ -40,3 +40,5 @@ secrets.yml
 .sts4-cache
 /.mvn/wrapper/maven-wrapper.properties
 /.mvn/wrapper/MavenWrapperDownloader.java
+/.idea/
+spring-learning.iml
