@@ -6,11 +6,22 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-//配置类==配置文件
-@Configuration //告诉Spring这是一个配置类
-public class MainConfig {
+/**
+ * 包扫描方式
+ *
+ * @author liubo
+ * @date 2020/11/19
+ */
+@Configuration
+@ComponentScan(value = "com.lbo.scans")
+public class ScanConfig {
 
-    @Bean//给容器中注册一个bean,类型为返回值的类型，默认方法名作为id
+    /**
+     * 给容器中注册一个bean,类型为返回值的类型，默认方法名作为id
+     *
+     * @return
+     */
+    @Bean
     public Person person() {
         return new Person("李四", 20);
     }
