@@ -9,47 +9,16 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-beans</artifactId>
+    <artifactId>spring-expression</artifactId>
     <version>${spring.version}</version>
+
 
     <dependencies>
         <dependency>
             <groupId>com.lbo</groupId>
             <artifactId>spring-core</artifactId>
             <version>${spring.version}</version>
-
         </dependency>
-
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
-        </dependency>
-
-        <dependency>
-            <groupId>javax.el</groupId>
-            <artifactId>javax.el-api</artifactId>
-            <version>2.2.5</version>
-        </dependency>
-
-        <dependency>
-            <groupId>javax.inject</groupId>
-            <artifactId>javax.inject</artifactId>
-            <version>1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.yaml</groupId>
-            <artifactId>snakeyaml</artifactId>
-            <version>1.17</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-core</artifactId>
-            <version>8.5.23</version>
-            <scope>test</scope>
-        </dependency>
-
 
         <dependency>
             <groupId>org.mockito</groupId>
@@ -82,6 +51,7 @@
             </exclusions>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
 </project>
