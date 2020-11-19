@@ -9,9 +9,11 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    
+
     <modules>
         <module>spring-annotation</module>
+        <module>spring-core</module>
+        <module>spring-beans</module>
     </modules>
 
     <properties>
