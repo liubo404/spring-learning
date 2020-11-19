@@ -17,6 +17,8 @@
         <module>spring-aop</module>
         <module>spring-context</module>
         <module>spring-expression</module>
+        <module>spring-instrument</module>
+<!--        <module>spring-beans-groovy</module>-->
     </modules>
 
     <properties>
