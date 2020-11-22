@@ -1,29 +1,49 @@
 package com.lbo.alogs.sorts;
 
-import org.jboss.arquillian.container.test.api.Deployment;
-import org.jboss.arquillian.junit.Arquillian;
-import org.jboss.shrinkwrap.api.ShrinkWrap;
-import org.jboss.shrinkwrap.api.asset.EmptyAsset;
-import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-
-import static org.junit.Assert.*;
 
 /**
  * @author liubo
  * @date 2020/11/22
  */
-@RunWith(Arquillian.class)
 public class SelectionSortTest {
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(SelectionSort.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
-    }
 
     @Test
     public void selectMinumSort() {
+
+        int[] array = {20, 35, -15, 7, 55, 1, -22, 0, 99};
+        printArray(array);
+        SelectionSort.selectMinumSort(array);
+        printArray(array);
+
     }
+
+    @Test
+    public void selectMinumSort2() {
+
+        int[] array = {20, 35, -15, 7, 55, 1, -22, 0, 99};
+        printArray(array);
+        SelectionSort.selectMinumSort2(array);
+        printArray(array);
+
+    }
+
+    @Test
+    public void test1() {
+
+        int[] array = {20, 35, -15, 7, 55, 1, -22};
+        printArray(array);
+        SelectionSort.selectLargestSort(array);
+        printArray(array);
+
+    }
+
+    private void printArray(int[] array) {
+        System.out.printf("the array is : [");
+        for (int i = 0; i < array.length; i++) {
+            System.out.printf(" " + array[i]);
+        }
+        System.out.println(" ]\n");
+    }
+
 }
