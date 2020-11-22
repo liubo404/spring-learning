@@ -13,6 +13,32 @@ public class ReverseWord {
         StringBuilder sb = new StringBuilder();
         Stack<String> wordStack = new Stack<>();
 
+        for (char a : arr) {
+            if ((a >= 'a' && a <= 'z')
+                    || (a >= 'A' && a <= 'Z')) {
+                sb.append(a);
+            } else {
+                String word = sb.toString();
+                wordStack.push(word);
+                wordStack.push(String.valueOf(a));
+                sb = new StringBuilder();
+            }
+        }
+        wordStack.push(sb.toString());
+        StringBuilder rb = new StringBuilder();
+        while (!wordStack.isEmpty()) {
+            rb.append(wordStack.pop());
+        }
+        return rb.toString();
+    }
+
+    public static String reverseWord2(String s) {
+
+        s = s.trim();
+        char[] arr = s.toCharArray();
+        StringBuilder sb = new StringBuilder();
+        Stack<String> wordStack = new Stack<>();
+
         boolean hasNextWord = false;
         for (char a : arr) {
             if ((a >= 'a' && a <= 'z')
@@ -20,11 +46,17 @@ public class ReverseWord {
                 sb.append(a);
                 hasNextWord = true;
             } else {
+
                 String word = sb.toString();
-                wordStack.push(word);
-                wordStack.push(String.valueOf(a));
+                if (!word.equals("")) {
+                    wordStack.push(word);
+                    wordStack.push(String.valueOf(a));
+                }
+
                 sb = new StringBuilder();
                 hasNextWord = false;
+
+
             }
         }
         if (hasNextWord) {

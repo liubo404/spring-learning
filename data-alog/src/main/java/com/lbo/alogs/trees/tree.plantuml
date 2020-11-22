@@ -1,0 +1,44 @@
+@startuml
+
+usecase 1
+usecase 2
+usecase 3
+usecase 4
+usecase 5
+usecase 6
+usecase 7
+usecase 8
+usecase 9
+usecase 10
+usecase 11
+usecase 13
+usecase 14
+
+1 -->2
+1 -->3
+
+2-->4
+2-->5
+3-->6
+3-->7
+
+4-->8
+4-->9
+5-->10
+5-->11
+
+6-->13
+7-->14
+
+
+@enduml
+
+
+@startmindmap
+
+* root
+** d1
+** d2
+*** d2
+
+@endmindmap
